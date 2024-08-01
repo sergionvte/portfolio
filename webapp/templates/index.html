@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Index page{% endblock title %}
+
+{% block action %}
+  <a href="{% url 'index' %}">
+    <li class="selected">Info</li>
+  </a>
+  <a href="{% url 'work' %}">
+    <li>Work</li>
+  </a>
+  <a href="{% url 'contact' %}">
+    <li>Contact</li>
+  </a>
+{% endblock action %}
+
+{% block content %}
+<section class="presentation flex">
+  {% load static %}
+  <img src="{% static 'img/me.png' %}" alt="me" class="profile-pic">
+  <div class="text-content">
+    <h1 class="greeting">Hi! I'm Sergio Navarrete</h1>
+    <p>I build dynamic web applications in Python using relational databases. Check out some of my projects by clicking <a href="{% url 'work' %}">here</a>.</p>
+    <p>We can also get in touch if you prefer, just send me an email by clicking <a href="{% url 'contact' %}">here</a>.</p>
+  </div>
+  <br>
+</section>
+{% endblock content %}
