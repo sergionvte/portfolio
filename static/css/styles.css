@@ -14,7 +14,7 @@
 
 html,
 body {
-  height: 100%;
+  height: calc(100% - 76px);
   margin: 0;
   background-color: #eee;
 }
