@@ -14,7 +14,7 @@
 
 html,
 body {
-  height: calc(100% - 76px);
+  height: 100%;
   margin: 0;
   background-color: #eee;
 }
@@ -60,6 +60,7 @@ a > li:hover {
 }
 
 section {
+  margin-top: 30px;
   padding: 0 15px;
   flex-direction: column;
 }
@@ -91,13 +92,19 @@ input[type=email],
 textarea {
   border: solid 2px #3a3a3a;
   border-radius: 10px;
-  padding: 4px 6px;
+  padding: 4px 8px;
   background-color: #ffffff88;
   width: 325px;
 }
 
 p > a {
   color: #ec827f;
+  transition: 0.1s;
+
+}
+
+p > a:hover {
+  color: #c66e6b;
 }
 
 .presentation {
@@ -131,10 +138,10 @@ p > a {
 }
 
 .project {
-  width: 250px;
+  width: 260px;
   height: 400px;
-  background: #bbbbbbaa;
   border-radius: 10px;
+  border: solid 2px #3a3a3a;
   padding: 10px 15px;
   transition: 0.3s;
   flex-direction: column;
@@ -142,6 +149,10 @@ p > a {
   background-size: cover;
   background-position: center;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project > p{
+  font-weight: 500;
 }
 
 .project > h3,
@@ -202,7 +213,7 @@ p > a {
 
 button,
 .project > .button {
-  padding: 4px 6px;
+  padding: 4px 8px;
   background-color: none;
   border: solid 2px #3a3a3a;
   border-radius: 10px;
@@ -217,7 +228,7 @@ button,
 
 button:hover,
 .project > .button:hover {
-  background-color: #3a3a3a10;
+  background-color: #3a3a3a44;
 }
 
 .mail-form {
