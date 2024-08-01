@@ -174,8 +174,15 @@ p > a {
   padding: 50px 0;
 }
 
+.or-space > span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .contact > p {
   margin: 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .mail-form {

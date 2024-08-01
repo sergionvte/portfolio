@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-g&3@!qotq-qrh4#f_a2w**m-2$i=)d7a#a0k7)ndisxl0s7jx^
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'sergionvte.pythonanywhere.com'
+    'sergionvte.pythonanywhere.com',
+    '127.0.0.1'
 ]
 
 
@@ -120,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# comment this before push
 # STATICFILES_DIRS = [
     # BASE_DIR / 'static'
 # ]
