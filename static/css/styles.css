@@ -177,6 +177,10 @@ p > a:hover {
   font-weight: 500;
 }
 
+.experience-title {
+  margin-top: 0;
+}
+
 .experience .text h5 {
   margin: 0;
 }
