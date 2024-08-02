@@ -1,20 +1,16 @@
-import sendgrid
-import json
-from sendgrid.helpers.mail import Mail, Email, To
-from django.conf import settings
-from django.contrib import messages
-from django.shortcuts import render, redirect
-from .models import Project
+from django.shortcuts import render
+from .models import Project, Job
 from .forms import EmailForm
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    jobs = Job.objects.all()
+    return render(request, 'index.html', {'jobs': jobs})
 
 
-def work(request):
+def projects(request):
     projects = Project.objects.all()
-    return render(request, 'work.html', {'projects': projects})
+    return render(request, 'projects.html', {'projects': projects})
 
 def contact(request):
     form = EmailForm()

@@ -6,8 +6,8 @@
   <a href="{% url 'index' %}">
     <li class="selected">Info</li>
   </a>
-  <a href="{% url 'work' %}">
-    <li>Work</li>
+  <a href="{% url 'projects' %}">
+    <li>Projects</li>
   </a>
   <a href="{% url 'contact' %}">
     <li>Contact</li>
@@ -18,11 +18,30 @@
 <section class="presentation flex">
   {% load static %}
   <img src="{% static 'img/me.webp' %}" alt="me" class="profile-pic">
-  <div class="text-content">
+  <div class="text-content flex">
     <h1 class="greeting">Hi! I'm Sergio Navarrete</h1>
-    <p>I build dynamic web applications in Python using relational databases. Check out some of my projects by clicking <a href="{% url 'work' %}">here</a>.</p>
+    <p>I build dynamic web applications in Python using relational databases. Check out some of my projects by clicking <a href="{% url 'projects' %}">here</a>.</p>
     <p>We can also get in touch if you prefer, just send me an email by clicking <a href="{% url 'contact' %}">here</a>.</p>
+    {% if jobs %}
+      <div class="line"></div>
+      <h3>Experience</h3>
+    {% endif %}
+    <div class="job-gallery flex">
+    {% for job in jobs %}
+      <div class="experience flex">
+        <div class="text">
+          <h3>{{ job.title }} at {{ job.company }}</h3>
+          <h5>{{ job.start_date }} - {{ job.end_date }}</h5>
+          <p>{{ job.description }}</p>
+        </div>
+        {% if job.logo %}
+          <div class="company-logo">
+            <img src="{{ job.logo.url }}" alt="company-logo">
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
   </div>
-  <br>
 </section>
 {% endblock content %}
