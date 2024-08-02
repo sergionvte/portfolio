@@ -17,20 +17,12 @@
 {% block content %}
 <section class="contact flex">
   <h1 class="work-title">Contact</h1>
-  <form class="mail-form flex">
-    <div class="mail-input flex">
-      <label for="email">Email</label>
-      <input type="email" placeholder="Your email :)" id="email">
-    </div>
-
-    <div class="mail-input flex">
-      <label for="message">Message</label>
-      <textarea placeholder="Your message here :)" id="message"></textarea>
-    </div>
-
-    <button type="submit">Send</button>
+  <form class="flex mail-form" action="{% url 'contact' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Send">
   </form>
-   <div class="or-space flex">
+  <div class="or-space flex">
     <div class="line"></div>
     <span>or</span>
     <div class="line"></div>

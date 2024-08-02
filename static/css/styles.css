@@ -78,6 +78,18 @@ section {
   animation: blinking 1s infinite
 }
 
+form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+
+form > div > label {
+  align-self: flex-start;
+}
+
 section > div > p,
 section > form > div > label,
 p > a,
@@ -89,12 +101,17 @@ textarea {
 }
 
 input[type=email],
+input[type=text],
 textarea {
   border: solid 2px #3a3a3a;
   border-radius: 10px;
   padding: 4px 8px;
   background-color: #ffffff88;
   width: 325px;
+}
+
+textarea {
+  height: 70px;
 }
 
 p > a {
@@ -212,7 +229,8 @@ p > a:hover {
 }
 
 button,
-.project > .button {
+.project > .button,
+input[type="submit"] {
   padding: 4px 8px;
   background-color: none;
   border: solid 2px #3a3a3a;
@@ -223,7 +241,6 @@ button,
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
-
 }
 
 button:hover,
@@ -232,6 +249,7 @@ button:hover,
 }
 
 .mail-form {
+  flex-direction: column;
   gap: 15px;
 }
 
@@ -261,11 +279,16 @@ textarea {
 }
 
 @media(max-width: 900px) {
+  body {
+    padding: 0px 15px;
+  }
+
   .or-space > .line {
     width: 150px;
   }
 
   input[type=email],
+  input[type=text],
   textarea {
     width: 250px;
   }
