@@ -165,6 +165,7 @@ p > a:hover {
 
 .experience {
   flex-direction: row;
+  background: #fff;
 }
 
 .text > h3 {
