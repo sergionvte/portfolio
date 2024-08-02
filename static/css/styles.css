@@ -220,7 +220,7 @@ p > a:hover {
 
 .social {
   gap: 15px;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .social > a > svg {
@@ -244,6 +244,7 @@ input[type="submit"] {
 }
 
 button:hover,
+input[type=submit]:hover,
 .project > .button:hover {
   background-color: #3a3a3a44;
 }
