@@ -31,7 +31,7 @@
       <div class="experience flex">
         <div class="text">
           <h3>{{ job.title }} at {{ job.company }}</h3>
-          <h5>{{ job.start_date }} - {{ job.end_date }}</h5>
+          <h5>{{ job.start_date }} - {% if job.end_date %}{{ job.end_date }}{% else %}Today{% endif %}</h5>
           <p>{{ job.description }}</p>
         </div>
         {% if job.logo %}
