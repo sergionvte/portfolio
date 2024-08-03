@@ -240,7 +240,8 @@ p > a:hover {
   margin-top: 20px;
 }
 
-.project:hover {
+.project:hover,
+.experience:hover {
   filter: brightness(95%);
   box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.3);
 }
