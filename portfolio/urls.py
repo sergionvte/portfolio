@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from webapp.views import (
-    index, projects, contact #, projects, info, contacts
+    index, projects, contact, success
 )
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('projects/', projects, name='projects'),
     path('contact/', contact, name='contact'),
+    path('success/', success, name='success'),
 ]
 
 if settings.DEBUG:

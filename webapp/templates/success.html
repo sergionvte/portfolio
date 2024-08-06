@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock title %}
+
+{% block action %}
+  <a href="{% url 'index' %}">
+    <li>About me</li>
+  </a>
+  <a href="{% url 'projects' %}">
+    <li>Projects</li>
+  </a>
+  <a href="{% url 'contact' %}">
+    <li>Contact</li>
+  </a>
+{% endblock action %}
+
+{% block content %}
+<section class="success flex">
+  <h1 class="success-title">Success</h1>
+  <p>I'll get back to you shortly :)</p>
+</section>
+{% endblock content %}

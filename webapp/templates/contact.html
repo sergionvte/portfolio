@@ -22,6 +22,15 @@
     {{ form }}
     <input type="submit" value="Send">
   </form>
+  {% if form.errors %}
+    <ul>
+      {% for field in form %}
+        {% for error in field.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+    {% endif %}
   <div class="or-space flex">
     <div class="line"></div>
     <span>or</span>

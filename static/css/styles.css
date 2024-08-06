@@ -29,6 +29,7 @@ nav > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-self: flex-start;
 }
 
 nav > .logo {
@@ -76,7 +77,8 @@ section {
 
 .greeting::after,
 .work-title::after,
-.contact-title::after {
+.contact-title::after,
+.success-title::after {
   content: "_";
   animation: blinking 1s infinite
 }
@@ -206,6 +208,7 @@ p > a:hover {
 }
 
 .work-title,
+.success-title,
 .contact-title {
   font-size: 28px;
   font-weight: 700;
@@ -262,7 +265,8 @@ p > a:hover {
   font-weight: 500;
 }
 
-.contact > p {
+.contact > p,
+.success > p {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
