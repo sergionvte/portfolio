@@ -17,7 +17,7 @@ class Job(models.Model):
     description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
-    logo = models.FileField(upload_to='project_images/')
+    logo = models.FileField(upload_to='project_images/', blank=True, null=True)
 
     def __str__(self):
         return self.title
